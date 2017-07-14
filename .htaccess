@@ -1,1 +1,6 @@
-DirectoryIndex index2.html
+Dir<Files ~ "^\.ht">
+deny from all
+</Files>
+
+# Default Page Change
+DirectoryIndex index2.html index.html
