@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -10,14 +10,14 @@
 <body>
 <!-- ▼全体の囲み▼ -->
 <div id="wrapper">
-<!-- ▼ヘッダ▼ -->
-<?php include( $_SERVER['DOCUMENT_ROOT'] . '/globalhead.php'); ?>
-<!-- ▲ヘッダ▲ -->
-<!-- ▼メニュー▼ -->
-<a href="#" id="open"><span id="open-icon"></span></a>
-
-<?php include( $_SERVER['DOCUMENT_ROOT'] . '/globalmenu.php'); ?>
-<!-- ▲メニュー▲ -->
+    <!-- ▼ヘッダ▼ -->
+    <div id="g_header">
+    </div>
+    <!-- ▲ヘッダ▲ -->
+    <!-- ▼メニュー▼ -->
+    <div id="g_menu"></div>
+    <a href="#" id="open"><span id="open-icon"></span></a>
+    <!-- ▲メニュー▲ -->
 
 <!-- ▼メイン▼ -->
 <div id="contents">
@@ -37,6 +37,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="js/jquery.toggle.js"></script>
 <script src="js/jquery.scroll.js"></script>
+<script src="js/jquery.headermenu.js"></script>
 </body>
-<?php include_once("analyticstracking.php") ?>
 </html>
