@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>てつくずおきば。</title>
+<title>くずてつおきば。</title>
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
@@ -26,7 +26,7 @@
 <h2>はじめに</h2>
 
 作ったものをぞろぞろ乗っけてます～。絵も曲もプログラムも～。<br>
-完全自己満の落書きのようなサイトですが、無断で物を持ってくのはやめてください！
+完全自己満の落書きのようなサイトですが、無断で物を持ってくのはやめてくださいっ！
 
 <h2>twitter</h2>
 <a class="twitter-timeline" href="https://twitter.com/shirohako007" data-widget-id="692590899872661504" data-chrome="noheader nofooter noborders transparent" width="580"　font-size:"10.5pt">410fのツイート</a>
@@ -46,28 +46,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="js/jquery.toggle.js"></script>
 <script src="js/jquery.scroll.js"></script>
+<script src="js/jquery.headermenu.js"></script>
 
-<script>
-    function yomikomu() {
-        $(function () {
-            $.ajax({
-                beforeSend: function (xhr) {
-                    xhr.overrideMimeType('text/html;charset=UTF-8');
-                },
-                type: "GET",
-                url: "globalhead.html",
-                timeout: 10000
-            })
-            .done(function (response, textStatus, jqXHR) {
-                console.log("いえーい")
-                $("#g_header").html(response)
-            })
-            .fail(function (jqXHR, textStatus, errorThrown) {
-                console.log("しっぱい")
-            });
-        });
-    }
-    yomikomu();
-</script>
 </body>
 </html>
