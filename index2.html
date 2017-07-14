@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -11,7 +11,8 @@
 <!-- ▼全体の囲み▼ -->
 <div id="wrapper">
 <!-- ▼ヘッダ▼ -->
-<?php include( $_SERVER['DOCUMENT_ROOT'] . '/globalhead.php'); ?>
+<div id="g_header">
+</div>
 <!-- ▲ヘッダ▲ -->
 <!-- ▼メニュー▼ -->
 <a href="#" id="open"><span id="open-icon"></span></a>
@@ -45,6 +46,28 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="js/jquery.toggle.js"></script>
 <script src="js/jquery.scroll.js"></script>
+
+<script>
+    function yomikomu() {
+        $(function () {
+            $.ajax({
+                beforeSend: function (xhr) {
+                    xhr.overrideMimeType('text/html;charset=UTF-8');
+                },
+                type: "GET",
+                url: "globalhead.html",
+                timeout: 10000
+            })
+            .done(function (response, textStatus, jqXHR) {
+                console.log("いえーい")
+                $("#g_header").html(response)
+            })
+            .fail(function (jqXHR, textStatus, errorThrown) {
+                console.log("しっぱい")
+            });
+        });
+    }
+    yomikomu();
+</script>
 </body>
-<?php include_once("analyticstracking.php") ?>
 </html>
